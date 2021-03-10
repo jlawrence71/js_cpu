@@ -18,13 +18,14 @@ function disassemble(memory,programEnd){
 
 function disassembleMicrocode(memory_0,memory_1){
 	var microcode = "SAP Microcode...\n---------------------------------\n";
+	microcode += ".......H123\n";
 	
 	for(var i=0;i<memory_0.length;i++){
 		var value_0 = memory_0[i];
 		var value_1 = memory_1[i];
 
 		if(value_0){
-			microcode += "0x" + pad(i.toString(16),3) + "  " + pad(value_1.toString(2),8) + " " + pad(value_0.toString(2),8) + "\n";
+			microcode += "0x" + pad(i.toString(16),3) + ".." + pad(value_1.toString(2),8) + ".." + pad(value_0.toString(2),8) + "\n";
 		} else {
 			microcode += "0x" + pad(i.toString(16),3) + "  -------- --------\n";
 		}
