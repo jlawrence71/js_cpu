@@ -38,7 +38,7 @@ function main(){
 	
 	// Clock Messages Subscribers
 	
-	// NOTE: Bus must be fisrt item to respond to clock
+	// NOTE: Bus must be first item to respond to clock
 	// Since it needs to set its value back to zero
 	//Util.subscribeWithContext(CLK_PULSE,bus,"onClock");
 
